@@ -59,7 +59,7 @@ a{
 body{
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
     margin: 0;
     background-color: rgb(226,232,240);
@@ -172,18 +172,25 @@ button:hover{
     background-color: rgb(10, 13, 202);
 }
 
-
-.others{
-    grid-column: 3;
-    grid-row: 2;
+.main-content{
     display: grid;
-    row-gap: 10px;
-    margin-right: 20px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content 1fr;
+    padding: 30px;
+    gap: 20px 30px;
+    padding-bottom: 50px;
+    margin: 0;
+}
+.announcements,.trending{
+    grid-column: 2;
     font-size: 0.75rem;
-    margin-top: 4.5%;
-    >div h1{
-        font-size: 1.6rem;
+    >h3{
+        font-size: 1.60rem;
+        margin-top: 0px;
     }
+}
+.trending{
+    grid-row: 2;
 }
 
 .card{
@@ -226,9 +233,10 @@ button:hover{
     }
 }
 .projects{
-    margin: 0 20px;
+    grid-row: 1/-1;
     >h3{
         font-size: 1.60rem;
+        margin-top: 0px;
     }
 }
 .projects-display{
