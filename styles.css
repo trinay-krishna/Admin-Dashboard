@@ -1,5 +1,25 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html{
     height: 100%;
+    font-family: 'Roboto';
 }
 .icon img,
 .project img{
@@ -20,7 +40,7 @@ menu{
 
 menu li span{
     font-weight: bold;
-    margin-left: 30px;
+    font-size: 1.3rem;
 }
 a{
     text-decoration: none;
@@ -40,7 +60,7 @@ body{
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 4fr;
     margin: 0;
-    gap: 20px 10px;
+    background-color: rgb(226,232,240);
 }
 
 .sidebar{
@@ -61,7 +81,7 @@ body{
     font-size: 1.6rem;
     >p{
         margin-top: auto;
-        padding-top: 10px;
+        padding-top: 7px;
     }
 }
 
@@ -73,21 +93,117 @@ body{
         display: grid;
         grid-template-columns: 1fr 8fr;
         justify-content: start;
-        gap: 5px;
+        gap: 7px;
         >span{
-            padding-top: 6px;
-            margin: 0;
+            padding-top: 3px;
         }
 
     }
 }
 
-
 .header{
     grid-column: 2/4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 4%;
+    box-shadow: 0 0 10px rgb(173, 166, 166);
+    background-color: white;
 }
+
+.nav{
+    margin: auto 0;
+    display: flex;
+    gap: 5px;
+}
+input{
+    width: 60%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(193, 196, 199);
+}
+
+.header-option{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    gap: 20px;
+    font-weight: bold;
+    >p span{
+        display: inline-block;
+        font-size: 1.5rem;
+        padding-top: 5px;
+    }
+}
+
+.header-profile{
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1.23rem;
+    >:nth-child(1){
+        padding-top: 15px;
+    }
+
+}
+
+.buttons{
+    grid-row: 2;
+    grid-column: 2;
+    margin: auto 0;
+    padding-left: 20%;
+    display: flex;
+    gap: 30px;
+    >*{
+        padding: 10px 30px;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(50, 117, 204);
+    }
+}
+
+button:hover{
+    color: white;
+    background-color: rgb(10, 13, 202);
+}
+
 
 .others{
     grid-column: 3;
     grid-row: 2;
+    display: grid;
+    gap: 3%;
+    margin-right: 20px;
+}
+
+.card{
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgb(184, 184, 184);
+    border-radius: 10px;
+}
+
+.notif{
+    border-bottom:1px solid rgb(134, 134, 134) ;
+    >:nth-child(1){
+        font-weight: bold;
+        margin-bottom: -7px;
+    }
+    &:last-of-type{
+        border: none;
+    }
+}
+
+.card.trending-card{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 14px;
+    >img{
+        height: 60px;
+        width: 60px;
+        align-self: center;
+    }
 }
