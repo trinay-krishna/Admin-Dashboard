@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Bold.woff2') format('woff2'),
@@ -109,7 +113,7 @@ body{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
     padding: 10px 4%;
-    box-shadow: 0 0 10px rgb(173, 166, 166);
+    box-shadow: 0 0 20px rgb(173, 166, 166);
     background-color: white;
 }
 
@@ -174,7 +178,7 @@ button:hover{
 
 .main-content{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1.4fr;
     grid-template-rows: min-content 1fr;
     padding: 30px;
     gap: 20px 30px;
